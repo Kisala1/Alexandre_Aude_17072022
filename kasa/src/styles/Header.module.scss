@@ -1,0 +1,19 @@
+.divContainer {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  .img {
+    width: 15%;
+  }
+  .ul {
+    display: flex;
+    list-style: none;
+    color: #ff6060;
+    .li {
+      margin: 20px;
+      cursor: pointer;
+    }
+  }
+}
