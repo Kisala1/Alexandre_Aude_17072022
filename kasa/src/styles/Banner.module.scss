@@ -1,19 +1,21 @@
 .divContainer {
-  margin: 0 100px;
+  margin: 0 100px 20px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+
   .img {
-    width: 15%;
+    width: 10%;
   }
-  .ul {
-    display: flex;
-    list-style: none;
+
+  .link {
+    text-decoration: none;
     color: #ff6060;
-    .li {
-      margin: 20px;
-      cursor: pointer;
+    padding: 10px;
+
+    &:active {
+      color: inherit;
     }
   }
 }
