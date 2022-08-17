@@ -1,7 +1,7 @@
 import Logo from '../../assets/Logo_Footer.png';
-import styles from '../../styles/Footer.module.scss';
+import styles from './Footer.module.scss';
 
-function Footer() {
+export function Footer() {
   return (
     <div className={styles.divContainer}>
       <div className={styles.div}>
@@ -11,4 +11,3 @@ function Footer() {
     </div>
   );
 }
-export default Footer;

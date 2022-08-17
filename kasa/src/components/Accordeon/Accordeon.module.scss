@@ -1,0 +1,19 @@
+.titleAccordeon {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  color: #fff;
+  background-color: #ff6060;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content {
+  padding: 20px 0 5px 5px;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

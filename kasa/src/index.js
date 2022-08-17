@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/index.scss';
-import Home from './pages/Home';
-import Details from './pages/Details/index'
+import Annonces from './data/Annonces.json';
+import { Home } from './pages/Home/Home';
+import { Details } from './pages/Details/Details';
 // import Error from './components/Error/index'
 import reportWebVitals from './reportWebVitals';
 
@@ -12,8 +13,8 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path='/details' element= {<Details />} />
+        <Route exact path="/" element={<Home annonces={Annonces} />} />
+        <Route path="/details" element={<Details />} />
         {/* <Route path='*' element= {<Error />} /> */}
       </Routes>
     </Router>
