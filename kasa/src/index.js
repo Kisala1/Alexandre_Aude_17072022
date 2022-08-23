@@ -5,6 +5,7 @@ import './styles/index.scss';
 import Annonces from './data/Annonces.json';
 import { Home } from './pages/Home/Home';
 import { Details } from './pages/Details/Details';
+import { Annonce } from './pages/Annonce/Annonce';
 // import Error from './components/Error/index'
 import reportWebVitals from './reportWebVitals';
 
@@ -14,7 +15,12 @@ root.render(
     <Router>
       <Routes>
         <Route exact path="/" element={<Home annonces={Annonces} />} />
-        <Route path="/details" element={<Details />} />
+        <Route exact path="/details" element={<Details />} />
+        <Route
+          exact
+          path="/annonces/:annonceId"
+          element={<Annonce annonces={Annonces} />}
+        />
         {/* <Route path='*' element= {<Error />} /> */}
       </Routes>
     </Router>

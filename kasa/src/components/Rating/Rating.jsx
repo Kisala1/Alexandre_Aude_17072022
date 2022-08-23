@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStarSharp } from '@fortawesome/free-solid-svg-icons';
-import styles from './Rating.module.scss'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import styles from './Rating.module.scss';
 
-export function Rating({ rating }) {
+export function Rating() {
   return (
     <div>
-      <div className={styles.ratingContainer} >
-        <FontAwesomeIcon icon={faStarSharp} />
+      <div className={styles.ratingContainer}>
+        <FontAwesomeIcon icon={faStar} />
       </div>
     </div>
   );

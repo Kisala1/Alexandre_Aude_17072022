@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import Photo from '../../assets/Photo_Accueil.png';
 import { Banner } from '../../components/Banner/Banner';
@@ -14,7 +15,9 @@ export function Home({ annonces }) {
       <div className={styles.grid}>
         {annonces.map((annonce, index) => (
           <div key={index} className={styles.div}>
-            <Card annonce={annonce} />
+            <Link className={styles.link} to={`/annonces/${annonce.id}`}>
+              <Card annonce={annonce}></Card>
+            </Link>
           </div>
         ))}
       </div>
