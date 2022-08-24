@@ -32,7 +32,7 @@ export function Annonce({ annonces }) {
           ))}
         </div>
         <div className={styles.containerRating}>
-          <Rating />
+          <Rating rating={findAnnonce.rating} />
         </div>
       </div>
       <Accordeon

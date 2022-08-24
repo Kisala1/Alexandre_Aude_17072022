@@ -45,8 +45,6 @@ export const Carrousel = ({ children }) => {
         })}
       </div>
 
-    
-
       <div className={styles.indicators}>
         <button
           onClick={() => {

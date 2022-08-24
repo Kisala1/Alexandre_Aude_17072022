@@ -1,6 +1,9 @@
 .div {
+  position: relative;
+  display: flex;
   height: 100%;
   .img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -8,8 +11,11 @@
   }
   .span {
     position: relative;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    height: 50px;
     color: #fff;
-    top: -40px;
-    left: 10px;
   }
 }

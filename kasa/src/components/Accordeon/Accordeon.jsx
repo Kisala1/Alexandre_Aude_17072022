@@ -4,15 +4,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './Accordeon.module.scss';
 
 export function Accordeon({ title, content, hasOpen }) {
-  const [isOpen, setOpen] = useState(false);
-
-  const displayContent = () => {
-    if (hasOpen && { content }) {
-      return <div className={styles.content}>{content}</div>;
-    } else if (isOpen && { content }) {
-      <div className={styles.content}>{content}</div>;
-    }
-  };
+  const [isOpen, setOpen] = useState(hasOpen);
 
   return (
     <div>
@@ -22,7 +14,6 @@ export function Accordeon({ title, content, hasOpen }) {
           <FontAwesomeIcon icon={faAngleDown} />
         </span>
       </div>
-      {displayContent()}
       {isOpen && <div className={styles.content}>{content}</div>}
     </div>
   );

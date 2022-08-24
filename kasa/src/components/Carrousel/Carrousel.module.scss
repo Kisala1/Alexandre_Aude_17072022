@@ -1,4 +1,5 @@
 .carrousel {
+  position: relative;
   overflow: hidden;
 
   .inner {
@@ -16,14 +17,18 @@
 }
 
 .indicators {
+  position: absolute;
+  top: calc(50% - 52px);
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
 }
 .indicators > button {
   cursor: pointer;
-  position: relative;
   border: none;
   background-color: transparent;
+  color: #fff;
   font-size: 5em;
   margin: 5px;
 }
