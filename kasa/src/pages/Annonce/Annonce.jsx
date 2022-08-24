@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
-import { Carrousel } from '../../components/Carrousel/Carrousel';
+import { Carrousel, CarouselItem } from '../../components/Carrousel/Carrousel';
 import { Tag } from '../../components/Tag/Tag';
 import { Rating } from '../../components/Rating/Rating';
 import { Accordeon } from '../../components/Accordeon/Accordeon';
@@ -14,7 +14,11 @@ export function Annonce({ annonces }) {
   return (
     <div>
       <Header />
-      <Carrousel annonce={findAnnonce} />
+      <Carrousel>
+        {findAnnonce.pictures.map((picture, index) => (
+          <CarouselItem key={index} children={picture} />
+        ))}
+      </Carrousel>
 
       <div>
         <div className={styles.intitule}>
@@ -31,7 +35,11 @@ export function Annonce({ annonces }) {
           <Rating />
         </div>
       </div>
-      <Accordeon title="Description" content={findAnnonce.description} hasOpen={true} />
+      <Accordeon
+        title="Description"
+        content={findAnnonce.description}
+        hasOpen={true}
+      />
 
       {/* <Accordeon title="Equipements" content={findAnnonce.equipements} /> */}
       <Footer />

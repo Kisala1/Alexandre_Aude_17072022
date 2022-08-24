@@ -10,7 +10,7 @@ export function Home({ annonces }) {
   const texte = 'Chez vous, partout et ailleurs';
   return (
     <div>
-      <Header />
+      <Header hasAccueil={true} />
       <Banner photo={Photo} content={texte} />
       <div className={styles.grid}>
         {annonces.map((annonce, index) => (

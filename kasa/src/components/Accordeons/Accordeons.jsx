@@ -14,6 +14,7 @@ export function Accordeons() {
           title={category}
           key={index}
           content={category === 'Respect' ? txtRespect : ' '}
+          hasOpen={false}
         ></Accordeon>
       ))}
     </div>

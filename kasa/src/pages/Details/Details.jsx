@@ -7,7 +7,7 @@ import Photo from '../../assets/Photo_Details.png';
 export function Details() {
   return (
     <div>
-      <Header />
+      <Header hasDetails={true} />
       <Banner photo={Photo} hasFilter={true}></Banner>
       <Accordeons />
       <Footer />
