@@ -6,7 +6,7 @@ import Annonces from './data/Annonces.json';
 import { Home } from './pages/Home/Home';
 import { Details } from './pages/Details/Details';
 import { Annonce } from './pages/Annonce/Annonce';
-// import Error from './components/Error/index'
+import { Error } from './components/Error/Error';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,7 +21,7 @@ root.render(
           path="/annonces/:annonceId"
           element={<Annonce annonces={Annonces} />}
         />
-        {/* <Route path='*' element= {<Error />} /> */}
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>
