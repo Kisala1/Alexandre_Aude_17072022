@@ -44,23 +44,26 @@ export const Carrousel = ({ children }) => {
           });
         })}
       </div>
-
-      <div className={styles.indicators}>
-        <button
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-        <button
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      </div>
+      {children.length === 1 ? (
+        <div></div>
+      ) : (
+        <div className={styles.indicators}>
+          <button
+            onClick={() => {
+              updateIndex(activeIndex - 1);
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            onClick={() => {
+              updateIndex(activeIndex + 1);
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
