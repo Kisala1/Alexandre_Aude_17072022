@@ -35,13 +35,21 @@ export function Annonce({ annonces }) {
           <Rating rating={findAnnonce.rating} />
         </div>
       </div>
-      <Accordeon
-        title="Description"
-        content={findAnnonce.description}
-        hasOpen={true}
-      />
+      <div className={styles.containerAccordeons}>
+        <Accordeon
+          title="Description"
+          content={findAnnonce.description}
+          hasOpen={true}
+          isFlex={true}
+        />
 
-      {/* <Accordeon title="Equipements" content={findAnnonce.equipements} /> */}
+        <Accordeon
+          title="Equipements"
+          array={findAnnonce.equipments}
+          hasOpen={true}
+          isFlex={true}
+        />
+      </div>
       <Footer />
     </div>
   );
