@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { Carrousel, CarouselItem } from '../../components/Carrousel/Carrousel';
 import { Tag } from '../../components/Tag/Tag';
+import { Profil } from '../../components/Profil/Profil';
 import { Rating } from '../../components/Rating/Rating';
 import { Accordeon } from '../../components/Accordeon/Accordeon';
 import { Footer } from '../../components/Footer/Footer';
@@ -13,7 +14,6 @@ export function Annonce({ annonces }) {
 
   return (
     <>
-      {' '}
       <div className={styles.container}>
         <Header />
         <Carrousel>
@@ -22,21 +22,28 @@ export function Annonce({ annonces }) {
           ))}
         </Carrousel>
 
-        <div>
+        <div className={styles.containerIP}>
           <div className={styles.intitule}>
             <h1 className={styles.title}>{findAnnonce.title}</h1>
             <h2 className={styles.location}>{findAnnonce.location}</h2>
           </div>
-          <div className={styles.host}></div>
-          <div className={styles.containerTags}>
+          <Profil
+            picture={findAnnonce.host.picture}
+            name={findAnnonce.host.name}
+          />
+        </div>
+        <div className={styles.containerTR}>
+          <div className={styles.tags}>
             {findAnnonce.tags.map((tag, index) => (
               <Tag key={index} tag={tag} />
             ))}
           </div>
-          <div className={styles.containerRating}>
+
+          <div className={styles.rating}>
             <Rating rating={findAnnonce.rating} />
           </div>
         </div>
+
         <div className={styles.containerAccordeons}>
           <Accordeon
             title="Description"

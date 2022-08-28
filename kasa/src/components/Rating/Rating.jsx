@@ -1,18 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
-/* import _theme.scss 
-$primary-color + $bg-color-Rating
-                |
-                |
-                |
-                V
-*/
-
-const StyleRating = styled(FontAwesomeIcon)`
-  color: #ff6060;
-  ${(props) => props.$greyRating && `color: #E3E3E3`}
-`;
+import styles from './Rating.module.scss';
 
 export function Rating({ rating }) {
   const displayRatings = () => {
@@ -21,9 +9,21 @@ export function Rating({ rating }) {
 
     for (let index = 1; index <= 5; index++) {
       if (ratingNumber >= index) {
-        content.push(<StyleRating key={index} icon={faStar} />);
+        content.push(
+          <FontAwesomeIcon
+            key={index}
+            icon={faStar}
+            className={styles.ratingFull}
+          />
+        );
       } else if (ratingNumber < index) {
-        content.push(<StyleRating key={index} icon={faStar} $greyRating />);
+        content.push(
+          <FontAwesomeIcon
+            key={index}
+            icon={faStar}
+            className={styles.ratingVoid}
+          />
+        );
       }
     }
     return <div>{content}</div>;

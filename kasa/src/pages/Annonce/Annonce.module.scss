@@ -1,30 +1,43 @@
 @use '../../styles/theme';
 
 .container {
-    margin: 0 100px;
-  .intitule {
-    color: theme.$primary-color;
+  margin: 0 100px;
+  .containerIP {
+    display: flex;
+    justify-content: space-between;
 
-    .title {
-      margin: 30px 0 10px 0;
-      color: inherit;
-      font-weight: normal;
-      font-size: 3em;
+    .intitule {
+      color: theme.$primary-color;
+
+      .title {
+        margin: 30px 0 10px 0;
+        color: inherit;
+        font-weight: normal;
+        font-size: 2.5em;
+      }
+      .location {
+        margin: 0 0 20px 0;
+        color: inherit;
+        font-weight: normal;
+        font-size: 1.5em;
+      }
     }
-    .location {
-      margin: 0 0 20px 0;
-      color: inherit;
-      font-weight: normal;
-      font-size: 1.5em;
+  }
+  .containerTR {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tags {
+      display: flex;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: end;
     }
   }
-  .containerTags {
-    display: flex;
-  }
-  .containerRating {
-    display: flex;
-    justify-content: end;
-  }
+
   .containerAccordeons {
     display: flex;
     gap: 50px;
