@@ -1,12 +1,23 @@
 @use '../../styles/theme';
 
 .ratingFull {
-    color: theme.$primary-color;
-    font-size: 1.5em;
-    padding: 5px;
+  color: theme.$primary-color;
+  font-size: 1.5em;
+  padding: 5px;
 }
 .ratingVoid {
-    color: theme.$color-Rating;
-    font-size: 1.5em;
+  color: theme.$color-Rating;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .ratingFull {
+    font-size: 1em !important;
     padding: 5px;
+  }
+  .ratingVoid {
+    font-size: 1em !important;
+    padding: 5px;
+  }
 }

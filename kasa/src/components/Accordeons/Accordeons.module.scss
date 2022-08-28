@@ -2,5 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 160px 100px 100px;
+  margin: 0 100px;
+}
+
+@media screen and (max-width: 768px) { 
+.accordeons {
+  margin: 0 0 20px 0!important;
+}
 }

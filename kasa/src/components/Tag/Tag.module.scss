@@ -7,3 +7,9 @@
   background-color: theme.$bg-primary-color;
   color: theme.$secondary-color;
 }
+
+@media screen and (max-width: 768px) {
+  .div {
+    margin: 10px 0;
+  }
+}

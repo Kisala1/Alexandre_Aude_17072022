@@ -22,18 +22,22 @@ export function Header({ hasAccueil, hasDetails }) {
       <img className={styles.img} src={Logo} alt="Logo Kasa"></img>
       <nav>
         {hasAccueil ? (
-          <StyledLink to="/" $hasAccueil>
+          <StyledLink to="/" className={styles.link} $hasAccueil>
             Accueil
           </StyledLink>
         ) : (
-          <StyledLink to="/">Accueil</StyledLink>
+          <StyledLink to="/" className={styles.link}>
+            Accueil
+          </StyledLink>
         )}
         {hasDetails ? (
-          <StyledLink to="/details" $hasDetails>
+          <StyledLink to="/details" className={styles.link} $hasDetails>
             A Propos
           </StyledLink>
         ) : (
-          <StyledLink to="/details">A Propos</StyledLink>
+          <StyledLink to="/details" className={styles.link}>
+            A Propos
+          </StyledLink>
         )}
       </nav>
     </div>

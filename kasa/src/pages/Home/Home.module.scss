@@ -24,3 +24,18 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 20px;
+  }
+  .grid {
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 255px !important;
+    gap: 20px !important;
+    background-color: transparent !important;
+  }
+  
+}

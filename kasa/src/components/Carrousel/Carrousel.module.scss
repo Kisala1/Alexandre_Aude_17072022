@@ -41,5 +41,22 @@
   background-color: transparent;
   color: theme.$secondary-color;
   font-size: 5em;
-  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .carrouselItem {
+    height: 255px !important;
+  }
+
+  .count {
+    display: none;
+  }
+  
+  .indicators {
+    top: calc(50% - 20px);
+    margin: 0 10px !important;
+  }
+  .indicators > button {
+    font-size: 2em !important;
+  }
 }

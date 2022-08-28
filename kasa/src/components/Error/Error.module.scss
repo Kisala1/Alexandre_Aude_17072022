@@ -10,21 +10,38 @@
     align-items: center;
     height: 78vh;
     color: theme.$primary-color;
-
-    .span {
-      color: inherit;
-      font-weight: bold;
-      font-size: 20em;
-    }
-    .p {
-      color: inherit;
-      font-size: 2em;
+    .divError {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .span {
+        color: inherit;
+        font-weight: bold;
+        font-size: 20em;
+      }
+      .p {
+        color: inherit;
+        font-size: 2em;
+      }
     }
     .link {
       color: inherit;
       &:active {
         color: inherit;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 20px !important;
+    .span {
+      font-size: 8em !important;
+    }
+    .p {
+      text-align: center;
+      font-size: 1.2em !important;
     }
   }
 }

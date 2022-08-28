@@ -9,7 +9,7 @@ export function Error() {
       <div className={styles.container}>
         <Header />
         <div className={styles.div}>
-          <div>
+          <div className={styles.divError}>
             <span className={styles.span}>404</span>
             <p className={styles.p}>
               Oups! La page que vous demandez n'existe pas.

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './Accordeon.module.scss';
 
-export function Accordeon({ title, content, hasOpen, array, isFlex }) {
+export function Accordeon({ title, content, array, isFlex }) {
   const hasArray = () => {
     if (array) {
       return array.map((equipement, index) => (
@@ -12,7 +12,7 @@ export function Accordeon({ title, content, hasOpen, array, isFlex }) {
     }
   };
 
-  const [isOpen, setOpen] = useState(hasOpen);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <>
