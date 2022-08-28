@@ -7,7 +7,7 @@ import styles from './Details.module.scss';
 export function Details() {
   return (
     <>
-      <Layout hasDetails={true} footerFixed={true}>
+      <Layout hasDetails={true}>
         <div className={styles.container}>
           <Banner photo={Photo} hasFilter={true}></Banner>
           <Accordeons />
