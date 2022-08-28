@@ -9,7 +9,8 @@ import styles from './Home.module.scss';
 export function Home({ annonces }) {
   const texte = 'Chez vous, partout et ailleurs';
   return (
-    <div>
+    <>
+    <div className={styles.container}>
       <Header hasAccueil={true} />
       <Banner photo={Photo} content={texte} />
       <div className={styles.grid}>
@@ -21,7 +22,8 @@ export function Home({ annonces }) {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 }

@@ -1,6 +1,8 @@
+@use '../../styles/theme';
+
 .divContainer {
   width: 100%;
-  background-color: #000;
+  background-color: theme.$bg-color-Footer;
   padding: 20px 0;
   .div {
     display: flex;
@@ -10,7 +12,7 @@
       width: 5%;
     }
     .p {
-      color: #fff;
+      color: theme.$secondary-color;
     }
   }
 }

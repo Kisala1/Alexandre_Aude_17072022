@@ -1,24 +1,30 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 80vh;
-  color: #ff6060;
+@use '../../styles/theme';
 
-  .span {
-    color: inherit;
-    font-weight: bold;
-    font-size: 20em;
-  }
-  .p {
-    color: inherit;
-    font-size: 2em;
-  }
-  .link {
-    color: inherit;
-    &:active {
+.container {
+  margin: 0 100px;
+
+  .div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 78vh;
+    color: theme.$primary-color;
+
+    .span {
       color: inherit;
+      font-weight: bold;
+      font-size: 20em;
+    }
+    .p {
+      color: inherit;
+      font-size: 2em;
+    }
+    .link {
+      color: inherit;
+      &:active {
+        color: inherit;
+      }
     }
   }
 }

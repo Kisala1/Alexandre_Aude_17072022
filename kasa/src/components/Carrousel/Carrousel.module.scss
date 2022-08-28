@@ -1,3 +1,5 @@
+@use '../../styles/theme';
+
 .carrousel {
   position: relative;
   overflow: hidden;
@@ -15,13 +17,15 @@
     }
   }
 }
+
 .count {
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-bottom: 30px;
-  color: #fff;
+  color: theme.$secondary-color;
 }
+
 .indicators {
   position: absolute;
   top: calc(50% - 52px);
@@ -34,7 +38,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: #fff;
+  color: theme.$secondary-color;
   font-size: 5em;
   margin: 5px;
 }

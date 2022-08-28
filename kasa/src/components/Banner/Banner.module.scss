@@ -1,3 +1,5 @@
+@use '../../styles/theme';
+
 .banner {
   position: relative;
   height: 200px;
@@ -18,7 +20,7 @@
     .p {
       position: relative;
       top: 50px;
-      color: #fff;
+      color: theme.$secondary-color;
       font-size: 200%;
       z-index: 2;
     }

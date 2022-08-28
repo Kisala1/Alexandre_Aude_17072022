@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
-import styles from './Rating.module.scss';
+/* import _theme.scss 
+$primary-color + $bg-color-Rating
+                |
+                |
+                |
+                V
+*/
 
 const StyleRating = styled(FontAwesomeIcon)`
   color: #ff6060;
@@ -20,7 +26,7 @@ export function Rating({ rating }) {
         content.push(<StyleRating key={index} icon={faStar} $greyRating />);
       }
     }
-    return <div className={styles.ratingContainer}>{content}</div>;
+    return <div>{content}</div>;
   };
 
   return <div>{displayRatings()}</div>;
