@@ -15,7 +15,13 @@
     }
   }
 }
-
+.count {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: 30px;
+  color: #fff;
+}
 .indicators {
   position: absolute;
   top: calc(50% - 52px);

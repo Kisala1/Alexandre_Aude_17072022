@@ -32,6 +32,8 @@ export const Carrousel = ({ children }) => {
     setActiveIndex(newIndex);
   };
 
+  const count = React.Children.count(children);
+
   return (
     <div className={styles.carrousel}>
       <div
@@ -44,6 +46,11 @@ export const Carrousel = ({ children }) => {
           });
         })}
       </div>
+
+      <div className={styles.count}>
+        {activeIndex + 1}/{count}
+      </div>
+
       {children.length === 1 ? (
         <div></div>
       ) : (
