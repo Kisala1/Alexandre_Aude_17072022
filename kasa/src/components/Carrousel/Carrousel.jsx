@@ -40,7 +40,7 @@ export const Carrousel = ({ children }) => {
         className={styles.inner}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {React.Children.map(children, (child, index) => {
+        {React.Children.map(children, (child) => {
           return React.cloneElement(child, {
             width: '100%',
           });
